@@ -44,9 +44,30 @@ export default defineConfig({
 
   projects: [
     // Setup project
-    { name: 'setup', testMatch: /.*\.setup\.ts/ },
+ //   { name: 'setup', testMatch: /.*\.setup\.ts/ },
     // Test project that requires authentication
+   
+   {
+      name: "MicrosoftEdge:latest:Windows10@lambdatest",
+      use: {
+        viewport: { width: 1280, height: 720 },
+      }
+    },
     {
+      name: "chrome:108:Windows10@lambdatest",
+      use: {
+
+        viewport: { width: 1280, height: 720 },
+      },
+    },
+    {
+      name: "pw-firefox:latest@lambdatest",
+      use: {
+
+        viewport: { width: 1280, height: 720 },
+      },
+    }
+   /* {
       name: 'authenticated',
       testMatch: /.account\.ts/,
       use: {
@@ -80,7 +101,8 @@ export default defineConfig({
     },
     {
       name: 'api',
-      testMatch: 'tests/api/**/*.spec.ts',
-    }
+      testMatch: 'tests/api/**.spec.ts',}*/
+    
+
   ],
 });
