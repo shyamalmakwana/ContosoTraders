@@ -2,10 +2,9 @@
 name: Github-coPilot Action
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+ on:
+  workflow_dispatch:
+
 jobs:
   HyperExecute-Playwright:
     runs-on: ${{ matrix.os }}
