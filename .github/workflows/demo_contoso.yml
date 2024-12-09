@@ -34,4 +34,4 @@ jobs:
               npm run start &
               curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute
               chmod u+x hyperexecute
-              ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts  --config hyperExecute.yaml
+              ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts  --config hyperexecute-matrix.yaml
