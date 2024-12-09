@@ -12,10 +12,10 @@ matrix:
     ]
   methods:
     [
-      tests/sample.spec.ts,
-      tests/pageTitle.spec.ts,
-      tests/searchbox.spec.ts,
-      verifyMsg.spec.ts
+      tests/cart.spec.ts,
+      tests/darkmode.spec.ts,
+      tests/map.spec.ts,
+      pages.spec.ts
     ]
 runson: ${matrix.os}
 tunnel: true
