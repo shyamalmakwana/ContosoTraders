@@ -2,8 +2,14 @@
 name: Github-coPilot Action
 
 on:
- on:
   workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        description: LT Username
+      accessKey:
+        description: LT Access Key
+        required: true
 
 jobs:
   HyperExecute-Playwright:
@@ -28,4 +34,4 @@ jobs:
               npm run start &
               curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute
               chmod u+x hyperexecute
-            ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts  --config hyperexecute-matrix.yaml
+              ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts  --config hyperexecute-matrix.yaml
