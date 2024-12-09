@@ -27,8 +27,8 @@ partialReports:
   type: html
   email:
     to:
-      - mudassars@lambdatest.com
-      - shyamalm@lambdatest.com
+      # - mudassars@lambdatest.com
+      # - shyamalm@lambdatest.com
 pre:
   - npm install
   - npx playwright install
