@@ -1,0 +1,39 @@
+---
+version: "0.1"
+retryOnFailure: true
+maxRetries: 3
+matrix:
+  os: [win,linux]
+  browser: [
+
+    "MicrosoftEdge:latest:Windows10@lambdatest",
+    "chrome:108:Windows10@lambdatest",
+    "pw-firefox:latest@lambdatest"
+    ]
+  methods:
+    [
+      tests/sample.spec.ts,
+      tests/pageTitle.spec.ts,
+      tests/searchbox.spec.ts,
+      verifyMsg.spec.ts
+    ]
+runson: ${matrix.os}
+tunnel: true
+mergeArtifacts: true
+report: true
+partialReports:
+  frameworkName: playwright
+  location: playwright-report
+  type: html
+  email:
+    to:
+      - mudassars@lambdatest.com
+      - mudits@lambdatest.com
+pre:
+  - npm install
+  - npx playwright install
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
+testSuites:
+  - npx playwright test --project=$browser $methods

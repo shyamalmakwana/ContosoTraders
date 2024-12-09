@@ -1,0 +1,122 @@
+version: "0.1"
+user: Shyamalm
+key: kot3dIbMaNf3h9T50ZjGjPIGA8iuRyCeYw27Norr5uRbzGq9qm
+testSuites: []
+pre: [npm install, npx playwright install]
+preDirectives:
+    commands: [npm install, npx playwright install]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+postDirectives:
+    commands: []
+    shell: ""
+    workingDirectory: ""
+runson: win
+autosplit: true
+concurrency: 5
+testDiscovery:
+    autosubset: true
+    command: grep -lr 'describe' tests -ir --include=*spec.ts
+    mode: dynamic
+    type: raw
+testRunnerCommand: npx playwright test $test
+globalTimeout: 90
+tunnelOpts:
+    testsPerTunnel: 10
+tunnelNames:
+    - fOLEFwvJmuOTqjys
+testSuiteTimeout: 90
+testSuiteStep: 90
+cacheDirectories:
+    - node_modules
+cacheKey: '{{ checksum "package-lock.json" }}'
+retryOnFailure: true
+maxRetries: 1
+jobID: 03cb9c20-b39d-4f6d-a8c5-83a1b6c4afe6
+codeDirectory: ContosoTraders.Ui.Website
+report: true
+framework:
+    name: ""
+    flags: []
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    runnerFlags: []
+    workingDirectory: ""
+    isTestNGXMLSuite: false
+    defaultReports: false
+    args:
+        appPath: ""
+        testSuitePath: ""
+        xcTestPlanPath: ""
+        shards:
+            mappings: []
+        filters:
+            attributes: []
+        devices: []
+        deviceSelectionStrategy: ""
+        appId: ""
+        testSuiteAppId: ""
+        xcTestPlanId: ""
+        skipXMLOnRun: false
+        skipInstall: false
+        disableReleaseDevice: false
+        platformName: ""
+        isRealMobile: null
+        avoidAppLaunch: false
+        queueTimeout: 0
+        uninstallPreviousBuild: false
+        language: ""
+        locale: ""
+        preservedDevice: false
+        fixedIP: ""
+        resignApp: true
+        minorOsVersion: false
+        playwrightRD: false
+        mobileDC: null
+        skipUninstallPreviousBuild: false
+        isVirtualDevice: false
+        mitmProxy: false
+        networkHar: false
+        artifacts: false
+    additional_args: null
+    licenseKey: ""
+    userdefinediscovery: false
+    toscaArgs: null
+    version: ""
+    downloadURL: ""
+    baseCommand: ""
+cypress: false
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+testType: playwright
+combineTasksInMatrixMode: false
+captureScreenRecordingForScenarios: false
+maxRetriesPreSteps: 0
+triggerMode: false
+sourcePayload:
+    verifySSL: true
+collectLocalGitData: true
+dynamicAllocation: false
+appium: false
+platformConfig: null
+differentialUpload:
+    enabled: false
+    ttlHours: null
+    forcedDisabled: false
+project:
+    id: ""
+    name: ""
+    type: default
+meta: {}
+alwaysRunPostSteps: false
+errorCategorizedOnFailureOnly: false
+testDiscoveryResultV3: []
+storageType: ""
+localHTTPProxy: ""
+regionConfig: []
+waitForArtefactsUpload: false
+unzipPayload: false
+accessibilityJob: false
+slackChannel: ""
